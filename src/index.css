@@ -1,0 +1,41 @@
+.rated-button {
+  margin: 20px 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rated-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+.rated-button:active {
+  background-color: black;
+  color: white;
+  transform: scale(1);
+}
+
+input[type="text"] {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+ #search-button{
+  border-radius: 25px;
+} 

@@ -1,15 +1,15 @@
-/* ProductCard.css */
+
 
 .product_card_container {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next row */
-    gap: 16px; /* Add spacing between cards */
-    justify-content: center; /* Center-align cards */
-    padding: 16px; /* Add padding around the container */
-    background-color: #f9f9f9; /* Light gray background */
+    flex-wrap: wrap; 
+    gap: 16px; 
+    justify-content: center; 
+    padding: 16px; 
+    background-color: #f9f9f9;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .product_card_container {
         flex-direction: column;

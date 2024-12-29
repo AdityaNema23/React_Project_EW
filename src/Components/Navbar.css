@@ -1,4 +1,4 @@
-/* Updated index.css */
+
 
 body {
     margin: 0;
@@ -10,11 +10,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2.5rem; /* Increased padding for height */
+    padding: 1rem 2.5rem; 
     background-color: #333;
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    height: 80px; /* Explicit height for consistency */
+    height: 80px; 
   }
   
   .navbar h1 {
@@ -42,7 +42,7 @@ body {
     color: #ff9800;
   }
   
-  /* Mobile responsiveness */
+
   @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
