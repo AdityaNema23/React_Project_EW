@@ -41,8 +41,16 @@ body {
   .navbar ul li:hover {
     color: #ff9800;
   }
-  
-
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: color 0.3s ease;
+  }
+  .navbar ul li a:hover {
+    color: #ff9800;
+  }
   @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
