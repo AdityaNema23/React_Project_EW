@@ -4,8 +4,10 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>Logo</h1>
+      <h1 onClick={() => (window.location.href = "/")} >Logo</h1>
+      
       <ul>
+      
         <li><Link to="/men">Men</Link></li>
         <li><Link to="/women">Women</Link></li>
         <li><Link to="/kids">Kids</Link></li>

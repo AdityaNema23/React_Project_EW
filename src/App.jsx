@@ -7,6 +7,7 @@ import Women from "./Components/Women";
 import Cart from "./Components/Cart";
 import ErrorPage from "./Components/ErrorPage";
 import { Outlet } from "react-router-dom";
+import ProductDetails from "./Components/ProductDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="men" element={<Men />} />
           <Route path="women" element={<Women />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="products/:productId" element={<ProductDetails />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -2,6 +2,7 @@ import Product from './Product';
 import './ProductCard.css';
 import { useEffect, useState } from 'react';
 import Skeleton from './skeleton';
+import { Link } from 'react-router-dom';
 
 
 const ProductCard = () => {
@@ -56,15 +57,20 @@ const ProductCard = () => {
             <div className="product_card_container">
 
                 {filterdList.map((product) => (
-                    <Product
-                        key={product.id}
-                        title={product.title}
-                        price={product.price}
 
-                        image={product.image}
-                        category={product.category}
-                        rating={product.rating}
-                    />
+                    <Link key={product.id} to={`/products/${product.id}`}>
+
+                        <Product
+
+                            title={product.title}
+                            price={product.price}
+
+                            image={product.image}
+                            category={product.category}
+                            rating={product.rating}
+                        />
+                    </Link>
+
                 ))}
             </div>
         </>
