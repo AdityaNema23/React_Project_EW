@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-
+/* can change later */
 .product-details {
   display: flex;
   flex-direction: row;
