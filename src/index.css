@@ -66,12 +66,10 @@ input[type="text"]:focus {
   max-width: 800px;
 }
 
-.section-message a {
+ a {
   font-size: 1.1rem;
   color: #007bff;
   text-decoration: none;
+  
 }
-
-.section-message a:hover {
-  text-decoration: underline;
-}
+/* text-decoration: none; */
