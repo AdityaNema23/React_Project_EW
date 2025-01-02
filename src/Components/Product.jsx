@@ -13,3 +13,12 @@ const Product = ({ title, price, image, category, rating }) => {
 };
 
 export default Product;
+
+export const HOF = (WrappedProduct) => {
+    return (props) => (
+        <div className="hof-container" style={{ position: "relative" }}>
+            <span className="sticker">Top Rated</span>
+            <WrappedProduct {...props} />
+        </div>
+    );
+};
