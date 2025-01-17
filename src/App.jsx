@@ -8,9 +8,13 @@ import Cart from "./Components/Cart";
 import ErrorPage from "./Components/ErrorPage";
 import { Outlet } from "react-router-dom";
 import ProductDetails from "./Components/ProductDetails";
+import { CartProvider } from "./Components/CartContext";
 
 function App() {
   return (
+
+    <CartProvider>
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -24,6 +28,8 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
+      
+    </CartProvider>
   );
 }
 
