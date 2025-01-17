@@ -5,7 +5,7 @@
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -26,7 +26,7 @@ input[type="text"] {
   margin: 20px 10px;
   padding: 10px 20px;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border: 2px solid black;
   border-radius: 5px;
   outline: none;
@@ -36,9 +36,9 @@ input[type="text"] {
 input[type="text"]:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
- #search-button{
+#search-button {
   border-radius: 25px;
-} 
+}
 
 /* navDefault */
 .section-message {
@@ -66,10 +66,38 @@ input[type="text"]:focus {
   max-width: 800px;
 }
 
- a {
+a {
   font-size: 1.1rem;
   color: #007bff;
   text-decoration: none;
-  
 }
 /* text-decoration: none; */
+
+.ButtonStyle {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto;  /* Ensure button stays at the bottom of the card */
+  width: 100%;  /* Full-width button to align with card width */
+  display: block;  /* Make sure it's block-level for alignment */
+}
+
+.ButtonStyle:hover {
+  background-color: #21867a;
+  transform: scale(1.05);
+}
+
+.ButtonStyle:active {
+  transform: scale(0.98);
+}
+
+.ButtonStyle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.7);
+}

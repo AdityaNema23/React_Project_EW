@@ -1,8 +1,8 @@
-import Product, { HOF } from './Product';
+
 import './ProductCard.css';
 import { useEffect, useState } from 'react';
 import Skeleton from './skeleton';
-import { Link } from 'react-router-dom';
+import Product from './Product'
 
 const ProductCard = () => {
     const [listOfProduct, setListofProduct] = useState([]);
@@ -36,7 +36,6 @@ const ProductCard = () => {
         fetchData();
     }, []);
 
-    const HOFComponent = HOF(Product);
 
     return listOfProduct.length === 0 ? (
         <Skeleton />
@@ -58,27 +57,17 @@ const ProductCard = () => {
             </button>
 
             <div className="product_card_container">
-            {filterdList.map((product) => (
-    <Link key={product.id} to={`/products/${product.id}`}>
-        {product.rating.rate >= 4 ? (
-            <HOFComponent
-                title={product.title}
-                price={product.price}
-                image={product.image}
-                category={product.category}
-                rating={product.rating}
-            />
-        ) : (
-            <Product
-                title={product.title}
-                price={product.price}
-                image={product.image}
-                category={product.category}
-                rating={product.rating}
-            />
-        )}
-    </Link>
-))}
+                {filterdList.map((product) =>
+                    <Product
+                        key={product.id}
+                        title={product.title}
+                        price={product.price}
+                        image={product.image}
+                        category={product.category}
+                        rating={product.rating}
+                        id={product.id}
+                    />
+                )}
 
             </div>
         </>

@@ -1,12 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import Skeleton from "./skeleton";
-import { useEffect, useState } from "react";
-import Product from "./Product";
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Skeleton from './skeleton';
+import Product from './Product';
 
-
-
-
-const Women = () => {
+const Jewelery = () => {
   const [listOfProduct, setListofProduct] = useState([]);
   const [filterdList, setFilterdList] = useState([]);
   const [flag, setFlag] = useState(false);
@@ -16,7 +13,7 @@ const Women = () => {
   const fetchData = async () => {
     const data = await fetch('https://fakestoreapi.com/products');
     const result = await data.json();
-    setListofProduct(result.filter((product) => product.category === "women's clothing"));
+    setListofProduct(result.filter((product) => product.category === "jewelery"));
   };
 
   useEffect(() => {
@@ -24,22 +21,20 @@ const Women = () => {
   }, []);
 
   useEffect(() => {
-    setFilterdList(listOfProduct.filter((product) => product.category === "women's clothing"));
+    setFilterdList(listOfProduct.filter((product) => product.category === "jewelery"));
 
   }, [listOfProduct]);
 
 
 
-
-
   const handleRateFilter = () => {
-    setFlag(!flag)
     const filteredProduct1 = filterdList.filter((product) => product.rating.rate >= 4);
     setFilterdList(flag ? filteredProduct1 : filterdList);
+    setFlag((prevFlag) => !prevFlag);
   };
 
   const handleSearch = () => {
-    const searchedData = filterdList.filter((product) =>
+    const searchedData = listOfProduct.filter((product) =>
       product.title.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilterdList(searchedData);
@@ -89,4 +84,6 @@ const Women = () => {
   );
 };
 
-export default Women;
+export default Jewelery;
+
+

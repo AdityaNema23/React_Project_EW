@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import { useCart } from './CartContext'; // Import the useCart hook
+import { useCart } from './CartContext'; 
 import './Navbar.css';
 
 const Navbar = () => {
-  const { cart } = useCart();  // Access the cart from context
+  const { cart } = useCart(); 
 
   return (
     <div className="navbar">
-      <h1 onClick={() => (window.location.href = "/")} >Logo</h1>
-      
+      <h1 className="heading">Trendify</h1>
+
       <ul>
         <li><Link to="/men">Men</Link></li>
         <li><Link to="/women">Women</Link></li>
-        <li><Link to="/kids">Kids</Link></li>
-        <li><Link to="/cart">Cart ({cart.length})</Link></li> {/* Display number of items in cart */}
+        <li><Link to="/Jewelery">Jewelery</Link></li>
+        <li><Link to="/cart">Cart ({cart.length})</Link></li> 
       </ul>
     </div>
   );
