@@ -1,11 +1,11 @@
-// src/Components/Cart.jsx
-import "./Cart.css"
-import { useCart } from './CartContext';
+import "./Cart.css";
+import { useCart } from "./CartContext";
 
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
 
   const handleRemoveFromCart = (productId) => {
+    console.log("Removing product with ID:", productId); // Debugging: Log the productId
     removeFromCart(productId);
   };
 
