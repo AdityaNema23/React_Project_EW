@@ -27,7 +27,7 @@ const Product = ({ title, price, image, category, rating = { rate: 0, count: 0 }
             <div className="product">
                 <Link to={`/products/${id}`}>
                     <img src={image} alt={title} className="product_img" />
-                    <h2 className="product_name">{truncateTitle(title)}</h2>
+                    <h2 className="product_name">{title.substring(0, 45) + ".."}</h2>
                     <p className="product_category">{category}</p>
                     <p className="product_price">${price}</p>
                     <span className="product_rating">⭐ {rating?.rate} ({rating?.count} reviews)</span>
